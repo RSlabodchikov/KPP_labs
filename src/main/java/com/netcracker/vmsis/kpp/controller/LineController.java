@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
-@RequestMapping(value = "/lab2/line")
+@RequestMapping(value = "/lab/line")
 public class LineController {
     private LineService service;
 
