@@ -27,7 +27,7 @@ public class LineController {
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public ResponseEntity createLine(
+    public synchronized ResponseEntity createLine(
             @RequestParam(name =  "params") List<String> params) {
         try {
             List<Integer> integers= params.stream().map(Integer::valueOf).collect(Collectors.toList());

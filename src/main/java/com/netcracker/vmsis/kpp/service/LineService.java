@@ -31,7 +31,7 @@ public class LineService {
 
 
     public Optional<Line> createLine(List<Integer> coordinates) {
-        counter.setCount(counter.getCount()+1);
+        log.info("The number of uses of the service in this session {}", counter.increment());
         if (coordinates.size() < 4) {
             log.error("Not enough coordinates");
             return Optional.empty();

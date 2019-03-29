@@ -22,10 +22,6 @@ public class LineCache {
 
     public boolean checkInput(Input input){
         return this.cache.containsKey(input);
-      /* for (Input i : cache.keySet()){
-           if (i.equals(input)) return true;
-       }
-       return false;*/
     }
 
     public Line findByInput(Input input){
