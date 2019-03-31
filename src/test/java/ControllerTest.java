@@ -23,10 +23,7 @@ public class ControllerTest {
     @Test
     public void test400() throws Exception {
         int status = mockMvc.perform(get("/lab2/line")
-                .param("x1","a")
-                .param("x2","2")
-                .param("y1","3")
-                .param("y2","3"))
+                .param("params","1,2,3,4"))
                 .andReturn().getResponse().getStatus();
         Assertions.assertThat(status).isEqualTo(HttpStatus.BAD_REQUEST.value());
     }

@@ -3,6 +3,7 @@ package com.netcracker.vmsis.kpp.controller;
 import com.netcracker.vmsis.kpp.entity.Line;
 import com.netcracker.vmsis.kpp.service.LineService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,14 +27,17 @@ public class LineController {
         this.service = service;
     }
 
+    private final static Logger logger = Logger.getLogger(LineController.class);
+
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public synchronized ResponseEntity createLine(
+    public  ResponseEntity createLine(
             @RequestParam(name =  "params") List<String> params) {
         try {
             List<Integer> integers= params.stream().map(Integer::valueOf).collect(Collectors.toList());
             log.info("Coordinates: {}", integers);
             Optional<Line> line = service.createLine(integers);
             if (line.isPresent()) {
+                logger.info("Response body: "+line.get().toString());
                 return ResponseEntity.ok(line.get());
             } else {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
