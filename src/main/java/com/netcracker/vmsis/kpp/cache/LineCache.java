@@ -16,15 +16,17 @@ import java.util.Map;
 public class LineCache {
     private Map<Input, Line> cache = new HashMap<>();
 
-    public void addLineToCache(Input input, Line line){
-        this.cache.put(input,line);
+    public void addLineToCache(Input input, Line line) {
+        log.info("You add object to cache:{}", line.toString());
+        this.cache.put(input, line);
     }
 
-    public boolean checkInput(Input input){
+    public boolean checkInput(Input input) {
         return this.cache.containsKey(input);
     }
 
-    public Line findByInput(Input input){
+    public Line findByInput(Input input) {
+        log.info("You get object from cache :{}", cache.get(input).toString());
         return this.cache.get(input);
     }
 

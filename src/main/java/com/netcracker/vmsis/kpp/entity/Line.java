@@ -5,6 +5,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
+@EqualsAndHashCode
 @ToString
 public class Line {
     private int projectionX;
