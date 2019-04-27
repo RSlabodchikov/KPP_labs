@@ -1,8 +1,8 @@
 package com.netcracker.vmsis.kpp.controller;
 
-import com.netcracker.vmsis.kpp.entity.Input;
 import com.netcracker.vmsis.kpp.entity.InputList;
 import com.netcracker.vmsis.kpp.entity.Line;
+import com.netcracker.vmsis.kpp.entity.ResultCollection;
 import com.netcracker.vmsis.kpp.service.LineService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
@@ -11,9 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
 @RestController
@@ -51,6 +51,14 @@ public class LineController {
     @RequestMapping(value = "/listParam", method = RequestMethod.POST)
     public ResponseEntity createLineCollection(@RequestBody InputList inputList) {
         return ResponseEntity.ok(service.createLineCollection(inputList));
+    }
+
+    @RequestMapping(value = "/listParam", method = RequestMethod.GET)
+    public ResponseEntity getResultCollection(@RequestParam(name = "id") Long id) throws InterruptedException, ExecutionException {
+        ResultCollection resultCollection = service.getResultCollectionById(id);
+        if (resultCollection != null) {
+            return ResponseEntity.ok(resultCollection);
+        } else return new ResponseEntity<>("Cannot find result or result is still processing!!!", HttpStatus.NOT_FOUND);
     }
 
 }
