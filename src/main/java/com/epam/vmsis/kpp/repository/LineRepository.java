@@ -1,6 +1,6 @@
-package com.netcracker.vmsis.kpp.repository;
+package com.epam.vmsis.kpp.repository;
 
-import com.netcracker.vmsis.kpp.entity.Line;
+import com.epam.vmsis.kpp.entity.Line;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

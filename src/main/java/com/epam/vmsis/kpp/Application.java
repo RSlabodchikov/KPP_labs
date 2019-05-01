@@ -1,4 +1,4 @@
-package com.netcracker.vmsis.kpp;
+package com.epam.vmsis.kpp;
 
 
 import org.springframework.boot.SpringApplication;

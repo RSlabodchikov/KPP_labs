@@ -1,9 +1,9 @@
-package com.netcracker.vmsis.kpp.controller;
+package com.epam.vmsis.kpp.controller;
 
-import com.netcracker.vmsis.kpp.entity.InputList;
-import com.netcracker.vmsis.kpp.entity.Line;
-import com.netcracker.vmsis.kpp.entity.ResultCollection;
-import com.netcracker.vmsis.kpp.service.LineService;
+import com.epam.vmsis.kpp.service.LineService;
+import com.epam.vmsis.kpp.entity.InputList;
+import com.epam.vmsis.kpp.entity.Line;
+import com.epam.vmsis.kpp.entity.ResultCollection;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

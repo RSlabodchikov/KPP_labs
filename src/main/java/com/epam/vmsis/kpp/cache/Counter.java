@@ -1,4 +1,4 @@
-package com.netcracker.vmsis.kpp.cache;
+package com.epam.vmsis.kpp.cache;
 
 
 import lombok.Data;

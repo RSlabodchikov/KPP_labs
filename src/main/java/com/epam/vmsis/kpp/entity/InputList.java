@@ -1,4 +1,4 @@
-package com.netcracker.vmsis.kpp.entity;
+package com.epam.vmsis.kpp.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

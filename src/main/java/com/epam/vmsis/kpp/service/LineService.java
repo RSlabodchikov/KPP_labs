@@ -1,11 +1,11 @@
-package com.netcracker.vmsis.kpp.service;
+package com.epam.vmsis.kpp.service;
 
 
-import com.netcracker.vmsis.kpp.cache.Counter;
-import com.netcracker.vmsis.kpp.cache.LineCache;
-import com.netcracker.vmsis.kpp.entity.*;
-import com.netcracker.vmsis.kpp.repository.InputRepository;
-import com.netcracker.vmsis.kpp.repository.LineRepository;
+import com.epam.vmsis.kpp.cache.Counter;
+import com.epam.vmsis.kpp.cache.LineCache;
+import com.epam.vmsis.kpp.entity.*;
+import com.epam.vmsis.kpp.repository.InputRepository;
+import com.epam.vmsis.kpp.repository.LineRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

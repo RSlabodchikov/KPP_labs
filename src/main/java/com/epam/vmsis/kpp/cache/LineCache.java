@@ -1,8 +1,8 @@
-package com.netcracker.vmsis.kpp.cache;
+package com.epam.vmsis.kpp.cache;
 
-import com.netcracker.vmsis.kpp.entity.Input;
-import com.netcracker.vmsis.kpp.entity.Line;
-import com.netcracker.vmsis.kpp.entity.ResultCollection;
+import com.epam.vmsis.kpp.entity.Input;
+import com.epam.vmsis.kpp.entity.ResultCollection;
+import com.epam.vmsis.kpp.entity.Line;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

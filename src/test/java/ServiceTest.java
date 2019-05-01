@@ -1,5 +1,5 @@
-import com.netcracker.vmsis.kpp.entity.Line;
-import com.netcracker.vmsis.kpp.service.LineService;
+import com.epam.vmsis.kpp.entity.Line;
+import com.epam.vmsis.kpp.service.LineService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

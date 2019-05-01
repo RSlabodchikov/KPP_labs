@@ -1,5 +1,5 @@
-import com.netcracker.vmsis.kpp.controller.LineController;
-import com.netcracker.vmsis.kpp.service.LineService;
+import com.epam.vmsis.kpp.controller.LineController;
+import com.epam.vmsis.kpp.service.LineService;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
